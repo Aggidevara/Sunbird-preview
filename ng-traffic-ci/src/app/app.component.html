@@ -1,0 +1,26 @@
+<div class="app-container">
+  <div class="traffic-container">
+    <h3 class="text-center">{{title}}</h3>
+    <h5 class="text-center">
+      Use the buttons below to handle the state of the signal
+    </h5>
+    <div class="actions-container text-center">
+      <div class="btn-group">
+        <button class="btn btn-danger stop-btn" (click)="stop()">STOP</button>
+        <button class="btn btn-warn ready-btn" (click)="ready()">READY</button>
+        <button class="btn btn-success go-btn" (click)="go()">GO</button>
+      </div>
+      <div class="btn-group">
+          <button class="btn btn-info" (click)="auto()">AUTO</button>
+      </div>
+    </div>
+    <div class="trafficlight">
+      <div class="protector"></div>
+      <div class="protector"></div>
+      <div class="protector"></div>
+      <div class="red light" [class.animate]="trafficLightState === 'red'"></div>
+      <div class="yellow light" [class.animate]="trafficLightState === 'yellow'"></div>
+      <div class="green light" [class.animate]="trafficLightState === 'green'"></div>
+    </div>
+  </div>
+</div>
