@@ -1,0 +1,7 @@
+<div class="ui grid link popular-section"> -->
+    <div class="ten wide column" *ngFor="let section of caraouselData">
+      <app-page-section (visits)="prepareVisits($event)" [section]="section" (playEvent)="playContent($event)"></app-page-section>
+    </div>
+    <div class="one wide column">
+    </div>
+   </div>

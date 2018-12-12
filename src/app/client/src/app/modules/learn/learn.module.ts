@@ -8,32 +8,40 @@ import { SlickModule } from 'ngx-slick';
 import { NgInviewModule } from 'angular-inport';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
-  LearnPageComponent, CoursePlayerComponent, CourseConsumptionHeaderComponent,
-  CourseConsumptionPageComponent, BatchDetailsComponent, EnrollBatchComponent, CreateBatchComponent,
-  UpdateCourseBatchComponent, CarriculumCardComponent } from './components';
+ LearnPageComponent, CoursePlayerComponent, CourseConsumptionHeaderComponent,
+ CourseConsumptionPageComponent, BatchDetailsComponent, EnrollBatchComponent, CreateBatchComponent,
+ UpdateCourseBatchComponent, CarriculumCardComponent} from './components';
 import { CourseConsumptionService, CourseBatchService, CourseProgressService } from './services';
 import { CoreModule } from '@sunbird/core';
 import { NotesModule } from '@sunbird/notes';
 import { DashboardModule } from '@sunbird/dashboard';
-
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatIconModule} from '@angular/material/icon';
+import { PreviewCourseComponent } from './components/preview-course/preview-course.component';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
-  imports: [
-    CommonModule,
-    SharedModule,
-    SuiModule,
-    DashboardModule,
-    SlickModule,
-    FormsModule,
-    LearnRoutingModule,
-    CoreModule,
-    ReactiveFormsModule,
-    NotesModule,
-    TelemetryModule,
-    NgInviewModule
-  ],
-  providers: [CourseConsumptionService, CourseBatchService, CourseProgressService],
-  declarations: [LearnPageComponent, CoursePlayerComponent, CourseConsumptionHeaderComponent,
-    CourseConsumptionPageComponent, BatchDetailsComponent, EnrollBatchComponent, CreateBatchComponent,
-    UpdateCourseBatchComponent, CarriculumCardComponent]
+ imports: [
+   CommonModule,
+   SharedModule,
+   SuiModule,
+   DashboardModule,
+   SlickModule,
+   FormsModule,
+   LearnRoutingModule,
+   CoreModule,
+   ReactiveFormsModule,
+   NotesModule,
+   TelemetryModule,
+   NgInviewModule,
+   MatTabsModule,
+   MatIconModule,
+   MatListModule,
+   MatCardModule
+ ],
+ providers: [CourseConsumptionService, CourseBatchService, CourseProgressService],
+ declarations: [LearnPageComponent, CoursePlayerComponent, CourseConsumptionHeaderComponent,
+   CourseConsumptionPageComponent, BatchDetailsComponent, EnrollBatchComponent, CreateBatchComponent,
+   UpdateCourseBatchComponent, CarriculumCardComponent, PreviewCourseComponent]
 })
 export class LearnModule { }
