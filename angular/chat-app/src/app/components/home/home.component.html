@@ -1,0 +1,36 @@
+<div class="container">
+  <h3>wHaTsApP</h3>
+  <div class="container chat">
+    <div *ngFor="let message of person1Message">
+    <div class="row text_left" *ngIf="message.userId !== loginUser">
+    <div class="col chat_1">
+        {{message.msg}}
+      </div>
+    </div>
+    <div class="row text_right" *ngIf="message.userId === loginUser">
+        <div class="col chat_2">
+          {{message.msg}}
+      </div>
+
+    </div>
+    <div class="row text_right" *ngIf="message.userId === loginUser">
+    <div class="col chat_2" ng-show="showme" *ngIf="userMessage !== ''">
+        {{userMessage}}
+    </div>
+  </div>
+  </div>
+
+</div>
+<div class="row fixed">
+    <div class="col-md-5">
+    <input type="text" placeholder="send Message" class="input-width"[formControl]="message">
+  </div>
+  <div class="col-md-2">
+      <button type="submit" class="button-send"(click)="submit($event)">
+        <mat-icon>send</mat-icon>
+      </button>
+  </div>
+</div>
+</div>
+
+

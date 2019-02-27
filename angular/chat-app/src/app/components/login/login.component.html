@@ -1,0 +1,18 @@
+<div class="container align-middle">
+<mat-card class="card-align">
+  <mat-card-content>
+    <mat-form-field class="field-width">
+        <input matInput placeholder="Enter your email" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <br/>
+      <mat-form-field class="field-width">
+        <input matInput placeholder="password" type="password" [formControl]="password" required>
+        <mat-error *ngIf="email.invalid">Enter password</mat-error>
+      </mat-form-field>
+  </mat-card-content>
+    <mat-card-actions>
+        <button mat-button color="primary" (click)="submit()">Sign In</button>
+      </mat-card-actions>
+</mat-card>
+</div>

@@ -1,0 +1,10 @@
+@import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+.col-md-4, .col-md-8 {
+  border: 2px solid;
+}
+.card {
+  width: 27vw;
+  left: 10em;
+}
+

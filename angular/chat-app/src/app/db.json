@@ -1,0 +1,57 @@
+{
+  "User": [
+    {
+      "email": "swetha@gmail.com",
+      "password": "123"
+    },
+    {
+      "email": "abc@gmail.com",
+      "password": "123"
+    }
+  ],
+  "login": {
+    "userId": "swetha@gmail.com"
+  },
+  "Chat": [
+    {
+      "userId": "swetha@gmail.com",
+      "msg": "hiii",
+      "id": 1
+    },
+    {
+      "userId": "abc@gmail.com",
+      "msg": "byee",
+      "id": 2
+    },
+    {
+      "userId": "swetha@gmail.com",
+      "msg": "hellloo",
+      "id": 3
+    },
+    {
+      "userId": "swetha@gmail.com",
+      "msg": "hello",
+      "id": 4
+    },
+    {
+      "userId": "abc@gmail.com",
+      "msg": "hello",
+      "id": 5
+    },
+    {
+      "userId": "abc@gmail.com",
+      "msg": "hii",
+      "id": 6
+    },
+    {
+      "userId": "swetha@gmail.com",
+      "msg": "byee",
+      "id": 7
+    },
+    {
+      "userId": "swetha@gmail.com",
+      "msg": "helllo",
+      "id": 8
+    }
+  ]
+}
