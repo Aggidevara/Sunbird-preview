@@ -177,6 +177,7 @@ fetchFilterMetaData() {
     console.log('categorylisrty', this.formFieldProperties);
     this.createFacets();
   } else {
+    console.log('hashtagid', this.hashTagId);
     this.frameworkDataSubscription = this.frameworkService.frameworkData$.subscribe((frameworkData: Framework) => {
       if (frameworkData && !frameworkData.err) {
         this.categoryMasterList = _.cloneDeep(frameworkData.frameworkdata);

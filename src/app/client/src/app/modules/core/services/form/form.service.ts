@@ -38,6 +38,7 @@ export class FormService {
     * @param {selectedContent} content selected content type
     */
   getFormConfig(formInputParams, hashTagId?: string): Observable<ServerResponse> {
+    console.log(formInputParams);
     const channelOptions = {
       url: this.configService.urlConFig.URLS.dataDrivenForms.READ,
       data: {
@@ -53,6 +54,7 @@ export class FormService {
     };
     return this.publicDataService.post(channelOptions).pipe(map(
       (formConfig: ServerResponse) => {
+        console.log(formConfig);
         return formConfig.result.form.data.fields;
       }));
   }
